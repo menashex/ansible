@@ -3,7 +3,7 @@
   hosts: linux-host
   vars:
     ansible_python_interpreter: /usr/bin/python3
-  remote_user: root
+  remote_user: centos
 
   tasks:
   - name: Ensure apache is at the latest version
@@ -15,7 +15,7 @@
   hosts: linux-host
   vars:
     ansible_python_interpreter: /usr/bin/python3
-  remote_user: root
+  remote_user: centos
 
   tasks:
   - name: Ensure postgresql is at the latest version
