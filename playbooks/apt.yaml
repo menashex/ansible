@@ -1,34 +1,42 @@
 ---
-- name: Update web servers
+- name: update repositories
   hosts: debian
-  vars:
+  tasks:
+  - name: running sudo apt update
+    ansible.builtin.apt:
+      update_cache: yes
+    become: yes
+    
+- name: Print all available facts
+  hosts: debian
+  tasks:
+  - name: print ansible facts
+    ansible.builtin.debug:
+      var: ansible_facts
+
+- name: install apache2 on debian server
+  hosts: debian
   tasks:
   - name: Ensure apache is at the latest version
     ansible.builtin.apt:
-      update_cache: yes
       name: apache2
       state: latest
     become: true
 
-- name: Update db servers
+- name: install ngnix on debian server
   hosts: debian
-  vars:
   tasks:
-  - name: Ensure postgresql is at the latest version
+  - name: Ensure nginx is at the latest version
     ansible.builtin.apt:
-      update_cache: yes
       name: nginx
       state: latest
     become: true
 
-  - name: Ensure that postgresql is started
-    ansible.builtin.service:
-      name: nginx
-      state: started
-
+- name: install python-gunicorn on debian server
+  hosts: debian
+  tasks:
   - name: Ensure python-gunicorn is installed
     ansible.builtin.apt:
-      update_cache: yes
       name: python3-gunicorn
       state: latest
     become: true
