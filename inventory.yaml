@@ -1,15 +1,17 @@
 ---
+all:
+  vars:
+    ansible_ssh_private_key_file: /home/menash/.ssh/stocks.pem
+    
 centos:
   hosts:
     ec2-18-184-62-77.eu-central-1.compute.amazonaws.com:
   vars:
-    ansible_ssh_user: centos
-    ansible_ssh_private_key_file: /home/menash/.ssh/stocks.pem
+    ansible_user: centos
 
 debian:
   hosts:
     #ec2-35-158-120-192.eu-central-1.compute.amazonaws.com:
     35.158.120.192:
   vars:
-    ansible_ssh_user: admin
-    ansible_ssh_private_key_file: /home/menash/.ssh/stocks.pem
+    ansible_user: admin
