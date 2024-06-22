@@ -17,12 +17,18 @@
   - name: Ensure postgresql is at the latest version
     ansible.builtin.apt:
       update_cache: yes
-      name: nginx=1.18.0
+      name: nginx
       state: latest
     become: true
 
   - name: Ensure that postgresql is started
     ansible.builtin.service:
-      name: nginx=1.18.0
+      name: nginx
       state: started
+
+  - name: Ensure python-gunicorn is installed
+    ansible.builtin.apt:
+      update_cache: yes
+      name: python3-gunicorn
+      state: latest
     become: true
