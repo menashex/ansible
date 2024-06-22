@@ -1,7 +1,8 @@
 ---
-- hosts: linux-host
+- name: pingtogoogle
+  hosts: all
   gather_facts: False
-  connection: local
+  #connection: local
   tasks:   
     - name: Example from an Ansible Playbook
       ansible.builtin.ping:
