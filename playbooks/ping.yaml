@@ -2,7 +2,7 @@
 - name: pingtogoogle
   hosts: debian
   gather_facts: False
-  connection: local
+  #connection: local
   tasks:   
     - name: ping
       ansible.builtin.raw: ping 8.8.8.8 -c 5
