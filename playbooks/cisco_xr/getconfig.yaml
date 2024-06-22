@@ -1,6 +1,6 @@
 ---
 - name: show run
-  hosts: ios_xx
+  hosts: ios_xr
   gather_facts: true
 
   tasks:
