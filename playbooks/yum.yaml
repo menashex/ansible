@@ -1,6 +1,6 @@
 ---
 - name: Update web servers
-  hosts: linux-host
+  hosts: centos
   vars:
     ansible_python_interpreter: /usr/bin/python3
   remote_user: centos
@@ -12,7 +12,7 @@
       state: latest
 
 - name: Update db servers
-  hosts: linux-host
+  hosts: centos
   vars:
     ansible_python_interpreter: /usr/bin/python3
   remote_user: centos

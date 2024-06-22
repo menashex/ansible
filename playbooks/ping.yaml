@@ -1,6 +1,6 @@
 ---
 - name: pingtogoogle
-  hosts: all
+  hosts: debian
   gather_facts: False
   #connection: local
   tasks:   

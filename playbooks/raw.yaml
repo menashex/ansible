@@ -1,6 +1,6 @@
 ---
 - name: rawping
-  hosts: all
+  hosts: debian
   gather_facts: False
   #connection: local
   tasks:
