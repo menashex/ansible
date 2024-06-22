@@ -2,15 +2,8 @@
 - name: pingtogoogle
   hosts: debian
   gather_facts: False
-  #connection: local
+  connection: local
   tasks:   
-    - name: Example from an Ansible Playbook
-      ansible.builtin.ping:
-
-    - name: Induce an exception to see what happens
-      ansible.builtin.ping:
-        data: crash
-        
     - name: ping
       shell: ping -c 1 -w 2 8.8.8.8
       ignore_errors: true
