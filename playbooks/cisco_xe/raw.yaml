@@ -1,0 +1,8 @@
+---
+- name: show run
+  hosts: ios_xx
+  gather_facts: true
+  #connection: local
+  tasks:
+  - name: get show run command
+    ansible.builtin.raw: show run

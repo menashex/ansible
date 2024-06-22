@@ -1,0 +1,12 @@
+---
+all:
+  vars:
+    #ansible_ssh_private_key_file: /home/menash/.ssh/stocks.pem
+    ansible_ssh_common_args: "-oHostKeyAlgorithms=+ssh-dss -oPubkeyAcceptedAlgorithms=+ssh-dss"
+    
+ios_xx:
+  hosts:
+    10.10.20.35:
+  vars:
+    ansible_user: developer
+    ansible_password: C1sco12345
