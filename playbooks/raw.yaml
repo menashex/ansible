@@ -5,4 +5,4 @@
   #connection: local
   tasks:
   - name: Bootstrap a host without python2 installed
-    ansible.builtin.raw: ping 8.8.8.8
+    ansible.builtin.raw: ping 8.8.8.8 -c 5
