@@ -1,0 +1,9 @@
+---
+- name: show run
+  hosts: ios_xx
+  gather_facts: true
+  
+  tasks:
+  - name: Get configuration and state data from startup datastore
+    ansible.netcommon.netconf_get:
+      source: startup
